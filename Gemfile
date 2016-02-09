@@ -14,6 +14,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'devise'
 
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'fog'   
+
 group :development, :test do
   gem 'byebug'
   gem 'rspec-rails', '~>3.0'
