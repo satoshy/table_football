@@ -40,5 +40,5 @@ group :test do
   gem 'faker'
 end
 
-gem 'web-console', group: :development
+gem 'web-console', '~> 2.0', group: :development
 gem 'rails_12factor', group: :production
