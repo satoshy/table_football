@@ -19,7 +19,7 @@ gem "rolify"
 
 gem 'omniauth'
 gem 'omniauth-facebook'
-gem 'omniauth-vkontakte'
+gem 'omniauth-google-oauth2'
 
 gem 'figaro'
 
@@ -28,15 +28,17 @@ gem 'mini_magick'
 gem 'fog'   
 
 group :development, :test do
+  gem 'spring'
   gem 'byebug'
   gem 'pry'
   gem 'rspec-rails', '~>3.0'
   gem 'factory_girl_rails'
 end
 
-group :development do
-  gem 'web-console', '~> 2.0'
-  gem 'spring'
+group :test do
+  gem 'shoulda-matchers'
+  gem 'faker'
 end
 
+gem 'web-console', group: :development
 gem 'rails_12factor', group: :production
