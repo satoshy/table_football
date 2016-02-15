@@ -4,7 +4,8 @@ RSpec.describe "teams/edit", type: :view do
   before(:each) do
     @team = assign(:team, Team.create!(
       :name => "MyString",
-      :tournament => nil
+      :first_player => 1,
+      :second_player => 1
     ))
   end
 
@@ -15,7 +16,9 @@ RSpec.describe "teams/edit", type: :view do
 
       assert_select "input#team_name[name=?]", "team[name]"
 
-      assert_select "input#team_tournament_id[name=?]", "team[tournament_id]"
+      assert_select "input#team_first_player[name=?]", "team[first_player]"
+
+      assert_select "input#team_second_player[name=?]", "team[second_player]"
     end
   end
 end

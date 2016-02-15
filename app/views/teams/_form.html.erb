@@ -16,8 +16,12 @@
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :tournament_id %><br>
-    <%= f.text_field :tournament_id %>
+    <%= f.label :first_player %><br>
+    <%= f.number_field :first_player %>
+  </div>
+  <div class="field">
+    <%= f.label :second_player %><br>
+    <%= f.number_field :second_player %>
   </div>
   <div class="actions">
     <%= f.submit %>
