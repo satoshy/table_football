@@ -2,7 +2,8 @@ class User < ActiveRecord::Base
   rolify
   
   has_and_belongs_to_many :tournament
-  has_many :teams, dependent: :destroy
+  has_many :fusers, class_name: "Team", foreign_key: "first_user_id", dependent: :destroy
+  has_many :susers, class_name: "Team", foreign_key: "second_user_id", dependent: :destroy
 
   mount_uploader :avatar, AvatarUploader
 
