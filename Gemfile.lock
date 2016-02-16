@@ -38,7 +38,7 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     arel (6.0.3)
-    autoprefixer-rails (6.3.2)
+    autoprefixer-rails (6.3.3)
       execjs
       json
     bcrypt (3.1.10)
@@ -73,6 +73,8 @@ GEM
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
     diff-lcs (1.2.5)
+    dropzonejs-rails (0.7.2)
+      rails (> 3.1)
     erubis (2.7.0)
     excon (0.45.4)
     execjs (2.6.0)
@@ -392,6 +394,7 @@ DEPENDENCIES
   carrierwave
   coffee-rails (~> 4.1.0)
   devise
+  dropzonejs-rails
   factory_girl_rails
   faker
   figaro

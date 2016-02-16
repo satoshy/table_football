@@ -24,6 +24,7 @@ gem 'omniauth-google-oauth2'
 gem 'figaro'
 
 gem 'carrierwave'
+gem 'dropzonejs-rails'
 gem 'mini_magick'
 gem 'fog'   
 
