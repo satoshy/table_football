@@ -33,11 +33,11 @@ group :development, :test do
   gem 'pry'
   gem 'rspec-rails', '~>3.0'
   gem 'factory_girl_rails'
+  gem 'faker'
 end
 
 group :test do
   gem 'shoulda-matchers'
-  gem 'faker'
 end
 
 gem 'web-console', '~> 2.0', group: :development
