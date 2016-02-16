@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160216122845) do
+ActiveRecord::Schema.define(version: 20160216142959) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,6 +27,14 @@ ActiveRecord::Schema.define(version: 20160216122845) do
 
   add_index "matches", ["fuser_team_id"], name: "index_matches_on_fuser_team_id", using: :btree
   add_index "matches", ["suser_team_id"], name: "index_matches_on_suser_team_id", using: :btree
+
+  create_table "matches_rounds", id: false, force: :cascade do |t|
+    t.integer "match_id", null: false
+    t.integer "round_id", null: false
+  end
+
+  add_index "matches_rounds", ["match_id", "round_id"], name: "index_matches_rounds_on_match_id_and_round_id", using: :btree
+  add_index "matches_rounds", ["round_id", "match_id"], name: "index_matches_rounds_on_round_id_and_match_id", using: :btree
 
   create_table "roles", force: :cascade do |t|
     t.string   "name"
