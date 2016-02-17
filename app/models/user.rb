@@ -46,4 +46,10 @@ class User < ActiveRecord::Base
       end
     end
   end
+
+  after_create :assign_default_role
+
+  def assign_default_role
+    add_role(:user)
+  end
 end
