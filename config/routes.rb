@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  
+  root to: "welcome#index"
+  get "*path" => "welcome#index"
 
   resources :matches
   resources :rounds
@@ -7,5 +10,4 @@ Rails.application.routes.draw do
   
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users, :controllers => { registrations: "users/registrations", omniauth_callbacks: "users/omniauth_callbacks" }
-  root to: "welcome#index"
 end
