@@ -47,6 +47,10 @@ class User < ActiveRecord::Base
     end
   end
 
+  def fullname
+    "#{first_name} #{last_name}"
+  end
+
   after_create :assign_default_role
 
   def assign_default_role

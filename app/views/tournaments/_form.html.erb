@@ -1,8 +1,6 @@
 <%= form_for(@tournament) do |f| %>
   <% if @tournament.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@tournament.errors.count, "error") %> prohibited this tournament from being saved:</h2>
-
+    <div class="alert alert-danger">
       <ul>
       <% @tournament.errors.full_messages.each do |message| %>
         <li><%= message %></li>
