@@ -26,7 +26,10 @@ gem 'figaro'
 gem 'carrierwave'
 gem 'dropzonejs-rails'
 gem 'mini_magick'
-gem 'fog'   
+gem 'fog'
+
+gem 'bower-rails', "~> 0.10.0"
+gem 'angular-rails-templates'
 
 group :development, :test do
   gem 'spring'
