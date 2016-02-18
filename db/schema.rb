@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160216142959) do
+ActiveRecord::Schema.define(version: 20160218083912) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,8 +19,10 @@ ActiveRecord::Schema.define(version: 20160216142959) do
   create_table "matches", force: :cascade do |t|
     t.string   "name"
     t.integer  "stage_type"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.integer  "count_fuser_team"
+    t.integer  "count_suser_team"
     t.integer  "fuser_team_id"
     t.integer  "suser_team_id"
   end
@@ -69,6 +71,7 @@ ActiveRecord::Schema.define(version: 20160216142959) do
     t.string   "name"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
+    t.integer  "count"
     t.integer  "first_user_id"
     t.integer  "second_user_id"
   end
@@ -110,6 +113,7 @@ ActiveRecord::Schema.define(version: 20160216142959) do
     t.string   "avatar",                 default: ""
     t.string   "provider"
     t.string   "uid"
+    t.decimal  "grade"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   
   root to: "welcome#index"
-  get "*path" => "welcome#index"
+  #get "*path" => "welcome#index"
 
   resources :matches
   resources :rounds
