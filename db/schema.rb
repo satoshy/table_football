@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160218083912) do
+ActiveRecord::Schema.define(version: 20160218093722) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,24 +19,18 @@ ActiveRecord::Schema.define(version: 20160218083912) do
   create_table "matches", force: :cascade do |t|
     t.string   "name"
     t.integer  "stage_type"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
-    t.integer  "count_fuser_team"
-    t.integer  "count_suser_team"
-    t.integer  "fuser_team_id"
-    t.integer  "suser_team_id"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+    t.integer  "count_first_team"
+    t.integer  "count_second_team"
+    t.integer  "first_team_id"
+    t.integer  "second_team_id"
+    t.integer  "round_id"
   end
 
-  add_index "matches", ["fuser_team_id"], name: "index_matches_on_fuser_team_id", using: :btree
-  add_index "matches", ["suser_team_id"], name: "index_matches_on_suser_team_id", using: :btree
-
-  create_table "matches_rounds", id: false, force: :cascade do |t|
-    t.integer "match_id", null: false
-    t.integer "round_id", null: false
-  end
-
-  add_index "matches_rounds", ["match_id", "round_id"], name: "index_matches_rounds_on_match_id_and_round_id", using: :btree
-  add_index "matches_rounds", ["round_id", "match_id"], name: "index_matches_rounds_on_round_id_and_match_id", using: :btree
+  add_index "matches", ["first_team_id"], name: "index_matches_on_first_team_id", using: :btree
+  add_index "matches", ["round_id"], name: "index_matches_on_round_id", using: :btree
+  add_index "matches", ["second_team_id"], name: "index_matches_on_second_team_id", using: :btree
 
   create_table "roles", force: :cascade do |t|
     t.string   "name"
@@ -126,5 +120,6 @@ ActiveRecord::Schema.define(version: 20160218083912) do
 
   add_index "users_roles", ["user_id", "role_id"], name: "index_users_roles_on_user_id_and_role_id", using: :btree
 
+  add_foreign_key "matches", "rounds"
   add_foreign_key "rounds", "tournaments"
 end
