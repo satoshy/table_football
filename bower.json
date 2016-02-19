@@ -12,7 +12,8 @@
       "three.js"    : "https://raw.github.com/mrdoob/three.js/master/build/three.js",
       "angular": "latest",
       "angular-ui-router": "latest",
-      "angular-animate": "latest"
+      "angular-animate": "latest",
+      "angular-devise": "latest"
     }
   }
 }

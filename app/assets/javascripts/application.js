@@ -15,6 +15,7 @@
 //= require angular
 //= require angular-animate
 //= require angular-ui-router
+//= require angular-devise
 //= require bootstrap-sprockets
 //= require dropzone
 //= require angular-rails-templates
