@@ -28,6 +28,7 @@ gem 'mini_magick'
 gem 'fog'
 
 gem 'bower-rails', "~> 0.10.0"
+gem "active_model_serializers"
 
 group :development, :test do
   gem 'spring'

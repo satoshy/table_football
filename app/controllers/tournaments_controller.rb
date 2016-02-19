@@ -3,9 +3,11 @@ class TournamentsController < ApplicationController
 
   def index
     @tournaments = Tournament.all
+    render json: @tournaments
   end
 
   def show
+    render json: @tournament
   end
 
   def new
@@ -13,40 +15,25 @@ class TournamentsController < ApplicationController
   end
 
   def edit
+    render json: @tournament
   end
 
   def create
-    @tournament = Tournament.new(tournament_params)
+    @tournament = Tournament.create(tournament_params)
 
-    respond_to do |format|
-      if @tournament.save
-        format.html { redirect_to @tournament, notice: 'Tournament was successfully created.' }
-        format.json { render :show, status: :created, location: @tournament }
-      else
-        format.html { render :new }
-        format.json { render json: @tournament.errors, status: :unprocessable_entity }
-      end
-    end
+    render json: @tournament, status:201
   end
 
   def update
-    respond_to do |format|
-      if @tournament.update(tournament_params)
-        format.html { redirect_to @tournament, notice: 'Tournament was successfully updated.' }
-        format.json { render :show, status: :ok, location: @tournament }
-      else
-        format.html { render :edit }
-        format.json { render json: @tournament.errors, status: :unprocessable_entity }
-      end
-    end
+    @tournament.update_attributes(tournament_params)
+    
+    render nothing:true, status:204
   end
 
   def destroy
     @tournament.destroy
-    respond_to do |format|
-      format.html { redirect_to tournaments_url, notice: 'Tournament was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+    
+    render nothing:true, status:204
   end
 
   private

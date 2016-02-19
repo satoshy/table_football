@@ -19,7 +19,7 @@
   </div>
   <div class="field">
     <%= f.label :status_type %><br>
-    <%= f.select :status_type, Tournament.status_types.keys %>
+    <%= f.text_field :status_type %>
   </div><br>
   <div class="actions">
     <%= f.submit %>
