@@ -21,7 +21,7 @@ class TournamentsController < ApplicationController
   def create
     @tournament = Tournament.create(tournament_params)
 
-    render json: @tournament, status:201
+    render json: @tournament, status:200
   end
 
   def update

@@ -39,6 +39,10 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
+    angular-rails-templates (1.0.0)
+      railties (>= 4.2, < 6)
+      sprockets (~> 3.0)
+      tilt
     arel (6.0.3)
     autoprefixer-rails (6.3.3)
       execjs
@@ -390,6 +394,7 @@ PLATFORMS
 
 DEPENDENCIES
   active_model_serializers
+  angular-rails-templates
   bootstrap-sass
   bower-rails (~> 0.10.0)
   byebug
@@ -419,6 +424,7 @@ DEPENDENCIES
   sdoc (~> 0.4.0)
   shoulda-matchers
   spring
+  sprockets
   uglifier (>= 1.3.0)
   web-console (~> 2.0)
 

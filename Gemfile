@@ -30,6 +30,9 @@ gem 'fog'
 gem 'bower-rails', "~> 0.10.0"
 gem "active_model_serializers"
 
+gem 'angular-rails-templates'
+gem 'sprockets'
+
 group :development, :test do
   gem 'spring'
   gem 'byebug'
