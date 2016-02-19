@@ -7,6 +7,37 @@
   <%= csrf_meta_tags %>
 </head>
 <body ng-app="table_football">
+  <header class="navbar navbar-fixed-top navbar-inverse">
+    <div class="container">
+      <%= link_to "TableFootball", root_path, id: "logo" %>
+      <nav>
+        <ul class="nav navbar-nav navbar-right">
+          <% if user_signed_in? %>
+            <li><%= link_to 'Tournaments', tournaments_path %><li>
+            <li><%= link_to 'Teams', teams_path %></li>
+            <li><%= link_to 'Rounds', rounds_path %></li>
+            <li><%= link_to 'Log out', destroy_user_session_path, method: :delete %></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <%= "#{current_user.fullname}" %> <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li><%= link_to 'Edit profile', edit_user_registration_path %></li>
+                <li class="divider"></li>
+                <li>
+                  <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
+                </li>
+              </ul>
+            </li>
+          <% else %>
+            <li><%= link_to "Sign In", new_user_session_path %></li>
+            <li><%= link_to "Sign Up", new_user_registration_path %></li>
+            <li><a href="/users/sign_up" target="_self">Sign up</a></li>
+          <% end %>
+        </ul>
+      </nav>
+    </div>
+  </header>
   <div class="row">
     <div class="col-md-6 col-md-offset-3">
       <div class="main-view-container" ui-view></div>
