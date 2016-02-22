@@ -4,13 +4,18 @@
 
 <form ng-submit="auth_ctrl.register()">
   <div class="form-group">
-    <label>Email Address
-      <input type="email" class="form-control" placeholder="Email" ng-model="auth_ctrl.user.email">
+    <label>First Name
+      <input type="text" class="form-control" placeholder="First Name" ng-model="auth_ctrl.user.firstname">
     </label>
   </div>
   <div class="form-group">
-    <label>Username
-      <input type="text" class="form-control" placeholder="Username" ng-model="auth_ctrl.user.username">
+    <label>Last Name
+      <input type="text" class="form-control" placeholder="Last Name" ng-model="auth_ctrl.user.lastname">
+    </label>
+  </div>
+  <div class="form-group">
+    <label>Email Address
+      <input type="email" class="form-control" placeholder="Email" ng-model="auth_ctrl.user.email">
     </label>
   </div>
   <div class="form-group">
@@ -19,6 +24,6 @@
     </label>
   </div>
 
-  <input type="submit" class="btn btn-default" value="Register">
+  <input type="submit" class="btn btn-success" value="Sign Up">
 </form>
 </div>
