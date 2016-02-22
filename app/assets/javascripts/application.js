@@ -19,5 +19,5 @@
 //= require bootstrap-sprockets
 //= require dropzone
 //= require angular-rails-templates
-//= require_tree .
 //= require_tree ./templates
+//= require_tree .

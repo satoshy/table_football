@@ -34,6 +34,6 @@ module TableFootball
 
     config.autoload_paths << Rails.root.join('lib')
 
-    config.assets.paths << Rails.root.join('vendor', 'assets', 'components')
+    config.assets.paths << Rails.root.join('vendor', 'assets', 'bower_components')
   end
 end
