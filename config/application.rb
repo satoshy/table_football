@@ -37,7 +37,7 @@ module TableFootball
     config.assets.paths << Rails.root.join('vendor', 'assets', 'bower_components')
 
     config.to_prepare do
-      DeviseController.respond_to :html, :json
+      DeviseController.respond_to :json
     end
   end
 end
