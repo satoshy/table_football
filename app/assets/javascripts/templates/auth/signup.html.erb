@@ -2,30 +2,20 @@
 <div class="container">
 <h1>SignUp</h1>
 
-<form ng-submit="AuthCtrl.register()">
-  <div class="form-group">
-    <label>First Name
-      <input type="text" class="form-control" placeholder="First Name" ng-model="AuthCtrl.user.firstname">
-    </label>
-  </div>
-  <div class="form-group">
-    <label>Last Name
-      <input type="text" class="form-control" placeholder="Last Name" ng-model="AuthCtrl.user.lastname">
-    </label>
-  </div>
+<form ng-submit="signUp()">
   <div class="form-group">
     <label>Email Address
-      <input type="email" class="form-control" placeholder="Email" ng-model="AuthCtrl.user.email">
+      <input type="email" class="form-control" placeholder="Email" ng-model="user.email">
     </label>
   </div>
   <div class="form-group">
     <label>Password
-      <input type="password" class="form-control" placeholder="Password" ng-model="AuthCtrl.user.password">
+      <input type="password" class="form-control" placeholder="Password" ng-model="user.password">
     </label>
   </div>
   <div class="form-group">
     <label>Password confirmation
-      <input type="password" class="form-control" placeholder="Password confirmation" ng-model="AuthCtrl.user.password_confirmation"
+      <input type="password" class="form-control" placeholder="Password confirmation" ng-model="user.password_confirmation"
     </label>
   </div>
 
