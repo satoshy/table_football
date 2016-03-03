@@ -2,7 +2,7 @@
 
 var tf = angular.module('table_football', ['rails', 'ngAnimate', 'ui.router', 'templates', 'Devise']);
 
-tf.config(function ($stateProvider, $urlRouterProvider) {
+tf.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
   $stateProvider
     .state('home', { url: '/', templateUrl: 'home/index.html', controller: 'HomeCtrl' })
     .state('tournaments', { url: '/tournaments', templateUrl: 'tournaments/index.html', controller: 'TournamentCtrl' })
@@ -11,4 +11,4 @@ tf.config(function ($stateProvider, $urlRouterProvider) {
     .state('auth_signup', { url: '/auth/signup', templateUrl: 'auth/signup.html', controller: 'AuthCtrl' });
 
    $urlRouterProvider.otherwise('/');
-});
+}]);
