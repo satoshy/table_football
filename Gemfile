@@ -47,10 +47,3 @@ end
 
 gem 'web-console', '~> 2.0', group: :development
 gem 'rails_12factor', group: :production
-
-source 'https://rails-assets.org' do
-  gem 'rails-assets-angular'
-  gem 'rails-assets-angular-animate'
-  gem 'rails-assets-angular-ui-router'
-  gem 'rails-assets-angular-devise'
-end
