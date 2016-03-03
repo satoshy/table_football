@@ -11,7 +11,7 @@
     <div class="container">
       <%= link_to "TableFootball", root_path, id: "logo" %>
       <nav>
-        <ul class="nav navbar-nav navbar-right">
+        <ul class="nav navbar-nav navbar-right" >
           <% if user_signed_in? %>
             <li><%= link_to 'Tournaments', tournaments_path %><li>
             <li><%= link_to 'Teams', teams_path %></li>
@@ -43,9 +43,7 @@
   </div>
   <div class="row">
     <div class="col-md-6 col-md-offset-3">
-      <div class="main-view-container" ui-view>
-        
-      </div>
+      <div class="main-view-container" ui-view></div>
     </div>
   </div>
 </body>

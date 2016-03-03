@@ -10,6 +10,10 @@ angular.module('table_football')
         }
      };
 
+    $scope.current_user = function() {
+        if (Auth._currentUser == null ) { return false } else { return true }
+    }
+
   	$scope.signIn = function() {
         Auth.login($scope.user, config).then(function(user) {
             console.log(user); // => {id: 1, ect: '...'}
