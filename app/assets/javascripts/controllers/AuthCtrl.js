@@ -1,8 +1,9 @@
 'use strict';
 
 var app = angular.module('table_football');
-  app.controller('AuthCtrl', ['$scope', '$location', 'Auth', function($scope, $location, Auth){
+  app.controller('AuthCtrl', ['$scope', '$location', 'Auth', 'flash', function($scope, $location, Auth, flash){
   	$scope.user = {};
+  	$scope.flash = flash;
 
     var config = {
         headers: {
@@ -18,7 +19,8 @@ var app = angular.module('table_football');
         Auth.login($scope.user, config).then(function(user) {
             console.log(user); // => {id: 1, ect: '...'}
         }, function(error) {
-            // Authentication failed...
+            flash.setMessage("Invalid email or password!");
+            $location.path("/home/index");
         });
 
         $scope.$on('devise:login', function(event, currentUser) {

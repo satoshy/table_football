@@ -1,4 +1,6 @@
 class SessionsController < Devise::SessionsController
+  respond_to :json
+  
   after_filter :set_csrf_headers, only: [:create, :destroy]
 
   protected
