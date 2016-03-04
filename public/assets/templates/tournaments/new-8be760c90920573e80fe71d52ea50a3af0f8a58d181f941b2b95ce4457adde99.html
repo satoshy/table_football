@@ -1,0 +1,27 @@
+<div class="container">
+  <h1>New Tournament</h1>
+  
+  <form ng-submit="submit()">
+    <div class="form-group">
+      <label>Name
+        <input type="text" class="form-control" ng-model="tournament.name">
+      </label>
+    </div>
+    <div class="form-group">
+      <label>Description
+        <input type="text" class="form-control" ng-model="tournament.description">
+      </label>
+    </div>
+    <div form-group>
+      <label>Status type
+        <select class="form-control" ng-model="tournament.status_type">
+          <option value="">
+          <option value="finished">Finished
+          <option value="сurrent">Current
+          <option value="not_started">Not Started
+        </select>
+      </label>
+    </div>
+    <input type="submit" class="btn btn-success" value="Submit">
+  </form>
+</div>
