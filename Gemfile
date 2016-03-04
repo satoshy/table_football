@@ -31,6 +31,7 @@ gem "active_model_serializers"
 
 gem 'angular-rails-templates'
 gem 'sprockets'
+gem 'angular_rails_csrf'
 
 group :development, :test do
   gem 'spring'

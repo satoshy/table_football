@@ -1,7 +1,7 @@
 'use strict';
 
-angular.module('table_football')
-  .controller('AuthCtrl', ['$scope', '$location', 'Auth', function($scope, $location, Auth){
+var app = angular.module('table_football');
+  app.controller('AuthCtrl', ['$scope', '$location', 'Auth', function($scope, $location, Auth){
   	$scope.user = {};
 
     var config = {
