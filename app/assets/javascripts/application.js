@@ -9,16 +9,13 @@
 //
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
-//
-//= require d3/d3
-//= require underscore/underscore
 //= require jquery
 //= require jquery_ujs
 //= require angular
 //= require angular-animate
 //= require angular-ui-router
 //= require angular-devise
-//= require angularjs-rails-resource
+//= require angularjs/rails/resource
 //= require bootstrap-sprockets
 //= require dropzone
 //= require angular-rails-templates

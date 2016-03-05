@@ -48,6 +48,7 @@ GEM
     angular_rails_csrf (1.0.4)
       rails (>= 3, < 5)
     angularjs-rails (1.5.0)
+    angularjs-rails-resource (2.0.0)
     arel (6.0.3)
     autoprefixer-rails (6.3.3)
       execjs
@@ -376,6 +377,7 @@ DEPENDENCIES
   angular-ui-router-rails
   angular_rails_csrf
   angularjs-rails
+  angularjs-rails-resource (~> 2.0.0)
   bootstrap-sass
   byebug
   cancancan

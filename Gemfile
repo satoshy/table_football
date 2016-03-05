@@ -31,6 +31,7 @@ gem "active_model_serializers"
 gem 'angularjs-rails'
 gem 'angular-ui-router-rails'
 gem 'angular-rails-templates'
+gem 'angularjs-rails-resource', '~> 2.0.0'
 gem 'angular_rails_csrf'
 
 source "https://rails-assets.org" do
