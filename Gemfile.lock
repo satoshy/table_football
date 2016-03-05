@@ -44,8 +44,10 @@ GEM
       railties (>= 4.2, < 6)
       sprockets (~> 3.0)
       tilt
+    angular-ui-router-rails (0.2.15)
     angular_rails_csrf (1.0.4)
       rails (>= 3, < 5)
+    angularjs-rails (1.5.0)
     arel (6.0.3)
     autoprefixer-rails (6.3.3)
       execjs
@@ -56,7 +58,6 @@ GEM
     bootstrap-sass (3.3.6)
       autoprefixer-rails (>= 5.2.1)
       sass (>= 3.3.4)
-    bower-rails (0.10.0)
     builder (3.2.2)
     byebug (8.2.2)
     cancancan (1.13.1)
@@ -280,14 +281,8 @@ GEM
       railties (= 4.2.5.1)
       sprockets-rails
     rails-assets-angular (1.5.0)
-    rails-assets-angular-animate (1.5.0)
-      rails-assets-angular (= 1.5.0)
     rails-assets-angular-devise (1.1.0)
       rails-assets-angular (>= 1.2.0, < 2)
-    rails-assets-angular-ui-router (0.2.18)
-      rails-assets-angular (>= 1.0.8, < 2)
-    rails-assets-angularjs-rails-resource (2.0.0)
-      rails-assets-angular
     rails-deprecated_sanitizer (1.0.3)
       activesupport (>= 4.2.0.alpha)
     rails-dom-testing (1.0.7)
@@ -378,9 +373,10 @@ PLATFORMS
 DEPENDENCIES
   active_model_serializers
   angular-rails-templates
+  angular-ui-router-rails
   angular_rails_csrf
+  angularjs-rails
   bootstrap-sass
-  bower-rails (~> 0.10.0)
   byebug
   cancancan
   carrierwave
@@ -400,11 +396,7 @@ DEPENDENCIES
   pg (~> 0.15)
   pry
   rails (= 4.2.5.1)
-  rails-assets-angular!
-  rails-assets-angular-animate!
   rails-assets-angular-devise!
-  rails-assets-angular-ui-router!
-  rails-assets-angularjs-rails-resource!
   rails_12factor
   rolify
   rspec-rails (~> 3.0)

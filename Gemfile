@@ -26,12 +26,18 @@ gem 'dropzonejs-rails'
 gem 'mini_magick'
 gem 'fog'
 
-gem 'bower-rails', "~> 0.10.0"
 gem "active_model_serializers"
 
+gem 'angularjs-rails'
+gem 'angular-ui-router-rails'
 gem 'angular-rails-templates'
-gem 'sprockets'
 gem 'angular_rails_csrf'
+
+source "https://rails-assets.org" do
+  gem "rails-assets-angular-devise"
+end
+
+gem 'sprockets'
 
 group :development, :test do
   gem 'spring'
@@ -48,11 +54,3 @@ end
 
 gem 'web-console', '~> 2.0', group: :development
 gem 'rails_12factor', group: :production
-
-source 'https://rails-assets.org' do
-  gem 'rails-assets-angular'
-  gem 'rails-assets-angular-animate'
-  gem 'rails-assets-angular-ui-router'
-  gem 'rails-assets-angular-devise'
-  gem 'rails-assets-angularjs-rails-resource'
-end
